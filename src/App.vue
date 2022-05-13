@@ -8,7 +8,11 @@
         </v-row>
 
       <video v-if="!imageData.image" ref="video" class="camera-stream" /> 
-      <div class="box blur"></div>
+      <div class="box1 blur"></div>
+      <div class="box2 blur"></div>
+      <div class="box3 blur"></div>
+      <div class="box4 blur"></div>
+
     </v-main>
   </v-app>
 </template>
@@ -61,10 +65,10 @@ export default {
   filter: grayscale(100%); 
 }
 
-.box {
+.box1 {
 
   border-radius: 0 1000px 1000px 0;
-  width: 25vw;
+  width: 50vw;
   height: 50vw;
   line-height: 1; 
 
@@ -72,16 +76,73 @@ export default {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 25vw;
+  left: 0;
   right: 0;
   margin: auto;
-
-
+-webkit-clip-path: polygon(50% 0, 50% 50%, 100% 20%, 100% 0);
+  clip-path: polygon(50% 0, 50% 50%, 100% 20%, 100% 0);
   z-index: 99999999;
-  
-
 }
+.box2 {
+
+  border-radius: 0 1000px 1000px 0;
+  width: 50vw;
+  height: 50vw;
+  line-height: 1; 
+
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+-webkit-clip-path: polygon(50% 50%, 100% 10%, 100% 63.4%, 100% 50%);
+  clip-path: polygon(50% 50%, 100% 10%, 100% 63.4%, 100% 50%);
+  z-index: 99999999;
+}
+.box3 {
+
+  border-radius: 0 1000px 1000px 0;
+  width: 50vw;
+  height: 50vw;
+  line-height: 1; 
+
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+-webkit-clip-path: polygon(50% 50%, 100% 100%, 100% 50%);
+  clip-path: polygon(50% 50%, 100% 100%, 100% 50%);
+  z-index: 99999999;
+}
+.box4 {
+
+  border-radius: 0 1000px 1000px 0;
+  width: 50vw;
+  height: 50vw;
+  line-height: 1; 
+
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  -webkit-clip-path: polygon(50% 50%, 100% 100%, 50% 100%);
+  clip-path: polygon(50% 50%, 100% 100%, 50% 100%);
+  z-index: 99999999;
+}
+
 .blur {
   backdrop-filter: blur(15px);  
+  filter: contrast(100%);
+}
+.v-application{
+  min-height: 100vh;
 }
 </style>
