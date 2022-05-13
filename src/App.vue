@@ -79,8 +79,8 @@ export default {
   left: 0;
   right: 0;
   margin: auto;
--webkit-clip-path: polygon(50% 0, 50% 50%, 100% 20%, 100% 0);
-  clip-path: polygon(50% 0, 50% 50%, 100% 20%, 100% 0);
+-webkit-clip-path: polygon(50% 0, 50% 50%, 100% 0, 100% 0);
+  clip-path: polygon(50% 0, 50% 50%, 100% 0, 100% 0);
   z-index: 99999999;
 }
 .box2 {
@@ -97,8 +97,8 @@ export default {
   left: 0;
   right: 0;
   margin: auto;
--webkit-clip-path: polygon(50% 50%, 100% 10%, 100% 63.4%, 100% 50%);
-  clip-path: polygon(50% 50%, 100% 10%, 100% 63.4%, 100% 50%);
+-webkit-clip-path: polygon(50% 50%, 100% 0, 100% 50%, 100% 50%);
+  clip-path: polygon(50% 50%, 100% 0, 100% 50%, 100% 50%);
   z-index: 99999999;
 }
 .box3 {
@@ -140,9 +140,11 @@ export default {
 
 .blur {
   backdrop-filter: blur(15px);  
-  filter: contrast(100%);
+  filter: contrast(120%);
 }
 .v-application{
   min-height: 100vh;
 }
+
+
 </style>
