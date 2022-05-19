@@ -1,17 +1,20 @@
 <template>
   <v-app>
     <v-main>
-
+        <v-img src="@/assets/45.png" style="height:100vh; width:100vw; position: absolute;"></v-img>
+        <v-img src="@/assets/46.png" style="height:100vh; width:100vw; position: absolute;"></v-img>
         <v-row class="pl-0 pr-0 pt-0 pb-0" >
           <v-col class="pl-0 pr-0 pt-0 pb-0" cols=6 style="background-color: white; height: 100vh"></v-col>
-          <v-col class="pl-0 pr-0 pt-0 pb-0"  cols=6 style="background-color: black; height: 100vh"></v-col>
+          <v-col class="pl-0 pr-0 pt-0 pb-0"  cols=6 style="background-color: #2B2B2B; height: 100vh"></v-col>
         </v-row>
 
       <video v-if="!imageData.image" ref="video" class="camera-stream" /> 
-      <div class="box1 blur"></div>
-      <div class="box2 blur"></div>
+      <!-- <div class="box1 blur"></div> -->
+      <!-- <div class="box2 blur"></div>
       <div class="box3 blur"></div>
-      <div class="box4 blur"></div>
+      <div class="box4 blur"></div> -->
+      <div class="box blur"></div>
+
 
     </v-main>
   </v-app>
@@ -45,8 +48,8 @@ export default {
 <style>
 .camera-stream {
   object-fit: cover;
-  width: 50vw;
-  height: 50vw;
+  width: 40vw;
+  height: 40vw;
   border-radius: 100%;
   position: absolute;
   top: 0;
@@ -64,8 +67,24 @@ export default {
   -webkit-filter: grayscale(1); 
   filter: grayscale(100%); 
 }
+.box {
 
-.box1 {
+  border-radius: 0 1000px 1000px 0;
+  width: 20vw;
+  height: 40vw;
+  line-height: 1; 
+
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20vw;
+  right: 0;
+  margin: auto;
+
+  z-index: 99999999;
+}
+/* .box1 {
 
   border-radius: 0 1000px 1000px 0;
   width: 50vw;
@@ -82,8 +101,8 @@ export default {
 -webkit-clip-path: polygon(50% 0, 50% 50%, 100% 0, 100% 0);
   clip-path: polygon(50% 0, 50% 50%, 100% 0, 100% 0);
   z-index: 99999999;
-}
-.box2 {
+} */
+/* .box2 {
 
   border-radius: 0 1000px 1000px 0;
   width: 50vw;
@@ -136,7 +155,7 @@ export default {
   -webkit-clip-path: polygon(50% 50%, 100% 100%, 50% 100%);
   clip-path: polygon(50% 50%, 100% 100%, 50% 100%);
   z-index: 99999999;
-}
+} */
 
 .blur {
   backdrop-filter: blur(15px);  
