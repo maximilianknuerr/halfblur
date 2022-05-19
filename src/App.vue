@@ -3,6 +3,7 @@
     <v-main>
         <v-img src="@/assets/45.png" style="height:100vh; width:100vw; position: absolute;"></v-img>
         <v-img src="@/assets/46.png" style="height:100vh; width:100vw; position: absolute;"></v-img>
+        <!-- <v-img src="@/assets/47.png" style="height:100vh; width:100vw; position: absolute; z-index: 99999999999;"></v-img> -->
         <v-row class="pl-0 pr-0 pt-0 pb-0" >
           <v-col class="pl-0 pr-0 pt-0 pb-0" cols=6 style="background-color: white; height: 100vh"></v-col>
           <v-col class="pl-0 pr-0 pt-0 pb-0"  cols=6 style="background-color: #2B2B2B; height: 100vh"></v-col>
